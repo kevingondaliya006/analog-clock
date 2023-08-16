@@ -6,16 +6,17 @@ function show_clock()
 
     let date = new date();
 
-    let hours =date.gethours();
-    let minutes= date.getminutes();
-    let seconds =  date.getseconds();
+    let hours =date.getHours();
+    let minutes = date.getMinutes();
+    let seconds =  date.getSeconds();
 
-    h.style.transform = 'rotate(${30 * hours + minutes/2} deg)';
-    m.style.transform = 'rotate(${6 * minutes} deg)';
-    s.style.transform = 'rotate(${6 * seconds} deg)';
+    h.style.transform = `rotate(${30 * hours + minutes / 2}deg)`;
+    m.style.transform = `rotate(${3 * minutes}deg)`;
+    s.style.transform = `rotate(${3 * seconds}deg)`;
 
     let sound = new Audio('sound.mp3')
     sound.play();
+
 }
 
 setInterval(show_clock, 1000);

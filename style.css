@@ -63,3 +63,8 @@ body{
     position: absolute;
     border-radius:5px;
 }
+:root {
+    --i: 1;
+    --h: 150px;
+    --clr: red;
+}

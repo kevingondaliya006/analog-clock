@@ -10,6 +10,15 @@ function updateBackground(weatherCondition) {
         body.style.background = 'linear-gradient(90deg, #808080 0%, #0000FF 100%)';
     } // Add more conditions as needed
 }
+document.addEventListener('DOMContentLoaded', function() {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+    var yyyy = today.getFullYear();
+
+    var formattedDate = mm + '/' + dd + '/' + yyyy;
+    document.getElementById('currentDate').textContent = formattedDate;
+});
 function show_clock() {
     let h = document.getElementsByClassName('hr')[0];
     let m = document.getElementsByClassName('mn')[0];
